@@ -18,12 +18,12 @@ Esse será um projeto fullstack, dessa forma, precisamos dar conta de toda a est
 - [x] Criar a API de autenticação de usuário para SignUp da própria plataforma.
 - [x] Criar a API de Login do usuário com o cadastro da própria plataforma.
 - [x] Criar a API para que o usuário consiga trocar senha de login, caso deseje
-- [x] Criar a API para recuperar senha de usuário, caso ele esqueça a senha
-- [ ] Criar a API para Auth com login de terceiros (Google Auth)
 - [ ] Criar a API para a criação/edição/deleção de profiles
 - [ ] Criar a API para a criação/edição/deleção de comunidades
 - [ ] Criar a API para a criação/edição/deleção de tópicos
 - [ ] Criar a API para a criação/edição/deleção de posts
+- [ ] Criar a API para recuperar senha de usuário, caso ele esqueça a senha
+- [ ] Criar a API para Auth com login de terceiros (Google Auth)
 - [ ] Criar testes integrados para cada uma das API's citadas
 - [ ] Criar testes e2e para cada uma das API's citadas
 
