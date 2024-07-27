@@ -11,12 +11,12 @@ Esse será um projeto fullstack, dessa forma, precisamos dar conta de toda a est
 
 ### Backend
 
-- [ ] Estruturar o projeto em NestJS, utilizando Prisma e MongoDB
-- [ ] Idealizar quais serão as API's necessárias para montar os Schemas no Prisma.
-- [ ] Desenvolver os Schemas no Prisma.
-- [ ] Conectar ao banco de dados e criar as collections necessárias
-- [ ] Criar a API de autenticação de usuário para SignUp da própria plataforma.
-- [ ] Criar a API de Login do usuário com o cadastro da própria plataforma.
+- [x] Estruturar o projeto em NestJS, utilizando Prisma e MongoDB
+- [x] Idealizar quais serão as API's necessárias para montar os Schemas no Prisma.
+- [x] Desenvolver os Schemas no Prisma.
+- [x] Conectar ao banco de dados e criar as collections necessárias
+- [x] Criar a API de autenticação de usuário para SignUp da própria plataforma.
+- [x] Criar a API de Login do usuário com o cadastro da própria plataforma.
 - [ ] Criar a API para Auth com login de terceiros (Google Auth)
 - [ ] Criar a API para recuperar senha de usuário, caso ele esqueça a senha
 - [ ] Criar a API para a criação/edição/deleção de profiles
