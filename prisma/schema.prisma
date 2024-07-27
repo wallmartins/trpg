@@ -1,0 +1,101 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userId    String   @id @default(uuid()) @map("_id")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  username String @unique
+  email    String @unique
+  hash     String
+
+  profiles Profile[]
+  comunity Comunity[]
+
+  @@map("users")
+}
+
+model Profile {
+  profileId String   @id @default(uuid()) @map("_id")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  owner User @relation(fields: [profileId], references: [userId])
+
+  firstName String
+  lastName  String
+  img       String
+  bio       String
+
+  friends String[]
+
+  comunity ComunityToProfile[]
+  topics   Topic[]
+  Post     Post?
+
+  @@map("profiles")
+}
+
+model ComunityToProfile {
+  communityProfileId String @id @default(uuid()) @map("_id")
+
+  profile Profile @relation(fields: [communityProfileId], references: [profileId])
+
+  comunity Comunity @relation(fields: [communityProfileId], references: [comunityId])
+}
+
+model Comunity {
+  comunityId String   @id @default(uuid()) @map("_id")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  creator User @relation(fields: [comunityId], references: [userId])
+
+  name  String
+  photo String
+  bio   String
+
+  members ComunityToProfile[]
+  topics  ComunityTopics[]
+
+  @@map("community")
+}
+
+model ComunityTopics {
+  comunityTopicid String @id @default(uuid()) @map("_id")
+
+  comunity Comunity @relation(fields: [comunityTopicid], references: [comunityId])
+
+  topic Topic @relation(fields: [comunityTopicid], references: [topicId])
+}
+
+model Topic {
+  topicId String @id @default(uuid()) @map("_id")
+
+  creator Profile @relation(fields: [topicId], references: [profileId])
+
+  comunity ComunityTopics[]
+  Post     Post?
+
+  @@map("topic")
+}
+
+model Post {
+  postId    String   @id @default(uuid()) @map("_id")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  content String
+
+  Profile Profile? @relation(fields: [postId], references: [profileId])
+  Topic   Topic?   @relation(fields: [postId], references: [topicId])
+
+  @@map("post")
+}
