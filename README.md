@@ -17,8 +17,8 @@ Esse será um projeto fullstack, dessa forma, precisamos dar conta de toda a est
 - [x] Conectar ao banco de dados e criar as collections necessárias
 - [x] Criar a API de autenticação de usuário para SignUp da própria plataforma.
 - [x] Criar a API de Login do usuário com o cadastro da própria plataforma.
-- [x] Criar a API para que o usuário consiga trocar email ou senha de login, caso deseje
-- [ ] Criar a API para recuperar senha de usuário, caso ele esqueça a senha
+- [x] Criar a API para que o usuário consiga trocar senha de login, caso deseje
+- [x] Criar a API para recuperar senha de usuário, caso ele esqueça a senha
 - [ ] Criar a API para Auth com login de terceiros (Google Auth)
 - [ ] Criar a API para a criação/edição/deleção de profiles
 - [ ] Criar a API para a criação/edição/deleção de comunidades

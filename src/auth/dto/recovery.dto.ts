@@ -1,13 +1,10 @@
 import { IsEmail, IsNotEmpty, IsString } from "class-validator";
 
-export class EditUserDto {
-  @IsEmail()
-  email?: string;
-
+export class ChangePasswordDto {
   @IsString()
   @IsNotEmpty()
   password: string
 
   @IsString()
-  newPassword?: string;
+  newPassword: string;
 }
